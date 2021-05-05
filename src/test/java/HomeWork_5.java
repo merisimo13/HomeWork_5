@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.sleep;
 
 public class HomeWork_5 {
     @Test
-    public void homeWork_5(){
+    public void HomeWork_5(){
         Configuration.browser = "chrome";
         System.setProperty("webdriver.chrome.driver", "files/chromedriver.exe");
         Configuration.startMaximized = true;
