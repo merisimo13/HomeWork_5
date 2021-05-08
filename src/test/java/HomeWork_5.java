@@ -1,3 +1,4 @@
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import org.junit.Test;
@@ -24,11 +25,11 @@ public class HomeWork_5 {
         $(byName("birthday_day")).selectOption("29");
         $(byName("birthday_year")).selectOption("1994");
         $(byText("Custom")).click();
+        $(byText("Select your pronoun")).shouldBe(Condition.visible);
         $(byName("preferred_pronoun")).click();
         $(byName("preferred_pronoun")).selectOption("She: \"Wish her a happy birthday!\"");
-        sleep (1000);
         $(byText("Female")).click();
-
+        $(byText("Select your pronoun")).shouldNotBe(Condition.visible);
         sleep (4000);
 
 
