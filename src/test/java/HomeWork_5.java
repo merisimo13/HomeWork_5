@@ -1,7 +1,8 @@
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
-import org.junit.Test;
+
+import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Selectors.byName;
 import static com.codeborne.selenide.Selectors.byText;
@@ -11,11 +12,7 @@ import static com.codeborne.selenide.Selenide.sleep;
 public class HomeWork_5 {
     @Test
     public void HomeWork_5(){
-        Configuration.browser = "chrome";
-        System.setProperty("webdriver.chrome.driver", "files/chromedriver.exe");
-        Configuration.startMaximized = true;
 
-        Selenide.open("https://www.facebook.com/");
         $(byText("Create New Account")).click();
         $(byName("firstname")).setValue("Meri");
         $(byName("lastname")).setValue("Simonishvili");
